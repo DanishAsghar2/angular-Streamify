@@ -1,0 +1,9 @@
+<div class="container mt-4" *ngIf="movie">
+    <h1>{{ movie.name }}</h1>
+    <img [src]="movie.image?.original || 'https://via.placeholder.com/300x450'" alt="{{ movie.name }}" />
+    <p>{{ movie.summary | stripHtml }}</p>
+    <p><strong>Premiered:</strong> {{ movie.premiered }}</p>
+    <p><strong>Rating:</strong> {{ movie.rating?.average || 'N/A' }}/10</p>
+    <a routerLink="/" class="btn btn-secondary">Back to Movies</a>
+  </div>
+  

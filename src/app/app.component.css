@@ -1,0 +1,108 @@
+/* Header Styling */
+header {
+  text-align: center;
+  background-color: #7894b2; 
+  color: #ffffff;
+  padding: 20px 0;
+  font-family: 'Poppins', sans-serif; 
+  font-size: 2rem;
+  box-shadow: 0 4px 6px rgba(45, 84, 226, 0.1);
+  transition: all 0.3s ease;
+}
+
+header:hover {
+  background-color: #aeffff; /* Darker blue on hover */
+}
+
+/* Footer Styling */
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  background-color: #007bff; /* Same blue as header */
+  color: #ffffff;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s ease;
+}
+
+footer:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Search Bar */
+input[type="text"] {
+  border-radius: 30px;
+  padding: 12px 20px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+}
+
+/* Movie Card Styling */
+.card {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f8f9fa; /* Light background for contrast */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 0.8s ease-in-out; /* Subtle animation */
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #007bff;
+  font-family: 'Poppins', sans-serif;
+}
+
+.card-body p {
+  color: #6c757d;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Row and Column Layout */
+.row {
+  margin-top: 20px;
+}
+
+.col-md-4 {
+  margin-bottom: 20px;
+}
+
+/* No Movies Fallback */
+.text-center {
+  color: #6c757d;
+  font-size: 1.1rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Fade-in Animation */
+@keyframes fadeInUp {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

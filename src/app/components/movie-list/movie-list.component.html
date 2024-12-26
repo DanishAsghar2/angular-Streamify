@@ -1,9 +1,4 @@
-<header class="bg-dark text-white p-3 text-center">
-  <h1>Danish's Streamify App</h1>
-</header>
-
 <div class="container mt-4">
-  <!-- Search Bar -->
   <div class="row mb-3">
     <div class="col-md-12">
       <input
@@ -16,13 +11,12 @@
     </div>
   </div>
 
-  <!-- Movies Display -->
   <div class="row" *ngIf="movies.length; else noMovies">
     <div class="col-md-4 mb-4" *ngFor="let movie of movies">
       <div class="card">
         <img
           class="card-img-top"
-          [src]="movie.image.medium"
+          [src]="movie.image?.medium || 'https://via.placeholder.com/210x295'"
           alt="{{ movie.name }}"
         />
         <div class="card-body">
@@ -33,14 +27,9 @@
     </div>
   </div>
 
-  <!-- Fallback Message -->
   <ng-template #noMovies>
     <div class="text-center">
       <p>No movies found. Try searching for something!</p>
     </div>
   </ng-template>
 </div>
-
-<footer class="bg-dark text-white text-center p-3 mt-5">
-  <p>&copy; Danish's Streamify App</p>
-</footer>
